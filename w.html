@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victoria Payment | Account Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="main">
+    <div class="tabs" role="tablist" aria-label="Account Portal Options">
+      <button class="tab active" role="tab" aria-selected="true" aria-controls="login" data-target="login">Login</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="signup" data-target="signup">Signup</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="checkout" data-target="checkout">Checkout</button>
+    </div>
+
+    <div id="login" class="panel active" role="tabpanel">
+      <h2>Welcome back - Log back into your account</h2>
+      <div class="panel-subtitle">Access your dashboard and recent activity.</div>
+
+      <form class="form" id="login-form" novalidate>
+        <div class="form-group">
+          <label for="login-username">Username or Email</label>
+          <input type="text" id="login-username" name="username" required aria-required="true" />
+          <div class="error-msg" id="error-login-username" aria-live="polite"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" name="password" required aria-required="true" />
+          <div class="error-msg" id="error-login-password" aria-live="polite"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+    </div>
+
+    <div id="signup" class="panel" role="tabpanel">
+      <h2>Create account</h2>
+      <div class="panel-subtitle">Join Victoria Pay and start managing your transactions.</div>
+
+      <form class="form" id="signup-form" novalidate>
+        <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label for="signup-firstname">First Name</label>
+            <input type="text" id="signup-firstname" name="firstname" required aria-required="true" />
+            <div class="error-msg" id="error-signup-firstname" aria-live="polite"></div>
+          </div>
+          <div class="form-group">
+            <label for="signup-lastname">Last Name</label>
+            <input type="text" id="signup

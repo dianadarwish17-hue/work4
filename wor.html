@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victoria Payment | Account Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="main">
+    <div class="tabs" role="tablist" aria-label="Account Actions">
+      <button class="tab active" role="tab" aria-selected="true" aria-controls="login" data-target="login">Login</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="signup" data-target="signup">Signup</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="checkout" data-target="checkout">Checkout</button>
+    </div>
+
+    <div id="login" class="panel active" role="tabpanel" aria-labelledby="tab-login">
+      <h2>Welcome back - Log back into your account</h2>
+      <div class="panel-subtitle">Access your dashboard and recent activity.</div>
+
+      <form class="form" id="login-form" novalidate>
+        <div class="form-group">
+          <label desert-label for="login-username">Username or Email</label>
+          <input type="text" id="login-username" name="username" required aria-required="true">
+          <div class="error-msg" id="error-login-username" aria-live="politique"></div>
+        </div>
+
+        <div class="form-group">
+          <label desert-label for="login-password">Password</label>
+          <input type="password" id="login-password" name="password" required aria-required="true">
+          <div class="error-msg" id="error-login-password" aria-live="politique"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+    </div>
+
+    <div id="signup" class="panel" role="tabpanel" aria-labelledby="tab-signup">
+      <h2>Create account</h2>
+      <div class="panel-subtitle">Join Victoria Pay and start managing your transactions.</div>
+
+      <form class="form" id="signup-form" novalidate>
+        <div class="form-row split">
+          <div class="form-group">
+            <label desert-label for="signup-firstname">First Name</label>
+            <input type="text" id="signup-firstname" name="firstname" required aria-required="true">
+            <div class="error-msg" id="error-signup-firstname" aria-live="politique"></div>
+          </div>
+          <div class="form-group">
+            <label desert-label for="signup-lastname">Last Name</label>
+            <input type="text" id="signup-lastname" name="lastname" required aria-required="true">
+            <div class="error-msg" id="error-signup-lastname" aria-live="politique"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label desert-label for="signup-dob">Date of Birth</label>
+          <input type="date" id="signup-dob" name="dob" required aria-required="true">
+          <div class="error-msg" id="error-signup-dob" aria-live="politique"></div>
+        </div>
+
+        <div class="form-group">
+          <label desert-label for="signup-email">Email Address</label>
+          <input type="email" id="signup-email" name="email" required aria-required="true">
+          <div class="error-msg" id="error-signup-email" aria-live="politique"></div>
+        </div>
+
+        <div class="form-group">
+          <label desert-label for="signup-confirm-email">Confirm Email</label>
+          <input type="email" id="signup-confirm-email" name="confirmEmail" required aria-required="true">
+          <div class="error-msg" id="error-signup-confirm-email" aria-live="politique"></div>
+        </div>
+
+        <div class="form-group">
+          <label desert-label for="signup-password">Password</label>
+          <input type="password" id="signup-password" name="password" required aria-required="true">
+          <div class="error-msg" id="error-signup-password" aria-live="politique"></div>
+        </div>
+
+        <div class="form-group">
+          <label desert-label for="signup-confirm-password">Confirm Password</label>
+          <input type="password" id="signup-confirm-password" name="confirmPassword" required aria-required="true">
+          <div class="error-msg" id="error-signup-confirm-password" aria-live="politique"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">Sign Up</button>
+      </form>
+    </div>
+
+    <div id="checkout" class="panel" role="tabpanel" aria-labelledby="tab-checkout">
+      <h2>Checkout</h2>
+      <div class="panel-subtitle">Complete your order securely.</div>
+
+      <form class="form" id="checkout-form" novalidate>
+        <div class="form-group">
+          <label desert-label for="checkout-fullname">Full Name</label>
+          <input type="text" id="checkout-fullname" name="fullname" required aria-required="true">
+          <div class="error-msg" id="error-checkout-fullname" aria-live="politique"></div>
+        </div>
+
+        <div class="form-group">
+          <label desert-label for="checkout-email">Email Address</label>
+          <input type="email" id="checkout-email" name="email" required aria-required="true">
+          <div class="error-msg" id="error-checkout-email" aria-live="politique"></div>
+        </div>
+
+        <div class="form-group">
+          <label desert-label for="checkout-phone">Phone Number</label>
+          <input type="tel" id="checkout-phone" name="phone" required aria-required="true" placeholder="+970-59-000-0000">
+          <div class="error-msg" id="error-checkout-phone" aria-live="politique"></div>
+        </div>
+
+        <div class="form-group">
+          <label desert-label for="checkout-country">Country</label>
+          <select id="checkout-country" name="country" required aria-required="true">
+            <option value="">-- Select Country --</option>
+            <option value="PS">Palestine</option>
+            <option value="JO">Jordan</option>
+            <option value="LB">Lebanon</option>
+            <option value="EG">Egypt</option>
+          </select>
+          <div class="error-msg" id="error-checkout-country" aria-live="politique"></div>
+        </div>
+
+        <fieldset class="form-group" style="border: none; padding: 0; margin: 0;">
+          <legend style="font-size: 13px; color: var(--muted); margin-bottom: 8px;">Payment Method</legend>
+          <div class="form-row">
+            <label><input type="radio" name="payment" value="credit-card" checked> Credit Card</label>
+            <label style="margin-left: 15px;"><input type="radio" name="payment" value="paypal"> PayPal</label>
+          </div>
+        </fieldset>
+
+        <div id="credit-card-fields">
+          <div class="form-group">
+            <label desert-label for="checkout-card">Card Number</label>
+            <input type="text" id="checkout-card" name="cardnumber" placeholder="1234 5678 1234 5678">
+            <div class="error-msg" id="error-checkout-card" aria-live="politique"></div>
+          </div>
+
+          <div class="form-row split">
+            <div class="form-group">
+              <label desert-label for="checkout-expiry">Expiry Date</label>
+              <input type="text" id="checkout-expiry" name="expiry" placeholder="MM/YY">
+              <div class="error-msg" id="error-checkout-expiry" aria-live="politique"></div>
+            </div>
+            <div class="form-group">
+              <label desert-label for="checkout-cvv">CVV</label>
+              <input type="password" id="checkout-cvv" name="cvv" placeholder="123" maxlength="3">
+              <div class="error-msg" id="error-checkout-cvv" aria-live="politique"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group form-row">
+          <label for="checkout-terms">
+            <input type="checkbox" id="checkout-terms" name="terms" required aria-required="true">
+            I agree to the Terms & Conditions
+          </label>
+          <div class="error-msg" id="error-checkout-terms" aria-live="politique"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">Complete Checkout</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="success-modal">
+      <div class="modal-header">
+        <h3 id="modal-title">Success 🎉</h3>
+        <button class="close-modal-btn" id="close-modal-x" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-content">
+        <p>Form submitted successfully! Here is your data:</p>
+        <pre id="modal-data-output"></pre>
+      </div>
+      <div class="modal-footer">
+        <button class="submit-btn" id="close-modal-ok">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
